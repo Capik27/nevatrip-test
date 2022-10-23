@@ -4,7 +4,7 @@ Nevatrip layout test task
 ВЕРСТКА
 ///////
 
-https://capik27.github.io/nevatrip-test/
+Верстка, таблицы и задача с путями тут: https://capik27.github.io/nevatrip-test/
 
 Поскольку изображения в фигме изменённые, взял пикчи с вашего сайта.
 
