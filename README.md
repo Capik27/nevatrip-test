@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+Nevatrip layout test task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+///////
+ВЕРСТКА
+///////
 
-## Available Scripts
+Поскольку изображения в фигме изменённые, взял пикчи с вашего сайта.
 
-In the project directory, you can run:
+1. Создан компонент адаптивной карточки, в который мы пробрасываем шаблонные данные о событии.
+   Так же задав внутренние свойства компонента, можно имитировать отображение карточки для мобилки или десктопа.
+   Можно кастомизировать внутр. элементы: кнопку и слоган("новинка")
 
-### `npm start`
+2. На десктопе таблицы выглядят хорошо, но на мобиле - появляется горизонтальный скролл, верстка едет. Что делать?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Ответ: переделать отображение в карточки. Меняем отображение tr и td элеменов с инлайнового в блочный. Если есть шапка и нужны тайтлы, то добавляем aria-label атрибут с именем каждому td елементу таблицы, и через псевдоелемент :before задаём имя attr(aria-label).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+///////
+JS
+///////
 
-### `npm test`
+БИЛЕТЫ НА СОБЫТИЕ:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Немного укоротил заголовки в таблице.
 
-### `npm run build`
+1. Некоторые события нужно продавать с дополнительными типами билетов - льготный и групповой, у которых будут свои цены и название. Имеется информация, что вероятно, будут другие типы билетов, которые нужно будет добавить. Нужно уметь сохранять при заказе 2 дополнительных типа билета, льготный и групповой в бд. Задача - Показать конечный вид таблицы с добавленными типами билетов. Объяснить свое решение.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ответ: просто добавляем нужное кол-во полей для соответствующих типов билетов.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Часто посетители из одного заказа приходят не одновременно на события. Возникает необходимость чекинить их по отдельности. Для этого у каждого билета должен быть свой баркод. Если в одном заказе было куплено несколько билетов, 2 взрослых, 3 детских, 4 льготных - то должно быть 9 баркодов для каждого билета соответственно. Задача - Показать конечный вид таблицы, где у каждого билета свой баркод. Объяснить свое решение.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ответ: поскольку для каждого билета нужен свой баркод, то нужно завести каждый из них, как отдельный заказ.
+В целом из этого следует, что кол-во будет всегда равно единице и можно убрать "меню" типов билетов с их ценниками, а вместо этого создать поле ticket_type, который будет показывать тип билета, исходя из которого будет появляться нужная цена. Заказ формируется в одинмомент одним пользователем, поэтому значения этих полей будет одинаковыми.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Время из A в B:
