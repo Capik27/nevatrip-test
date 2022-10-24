@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/nevatrip-test/static/css/main.31b5f411.css",
-    "main.js": "/nevatrip-test/static/js/main.96d3add1.js",
+    "main.js": "/nevatrip-test/static/js/main.2d0214ba.js",
     "static/js/787.a7d43bb2.chunk.js": "/nevatrip-test/static/js/787.a7d43bb2.chunk.js",
     "static/media/clock.svg": "/nevatrip-test/static/media/clock.faf7919bb7f61502e828a98a8ced8d94.svg",
     "index.html": "/nevatrip-test/index.html",
     "static/media/check-mark.svg": "/nevatrip-test/static/media/check-mark.9140d4d53885657bf775.svg",
     "main.31b5f411.css.map": "/nevatrip-test/static/css/main.31b5f411.css.map",
-    "main.96d3add1.js.map": "/nevatrip-test/static/js/main.96d3add1.js.map",
+    "main.2d0214ba.js.map": "/nevatrip-test/static/js/main.2d0214ba.js.map",
     "787.a7d43bb2.chunk.js.map": "/nevatrip-test/static/js/787.a7d43bb2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31b5f411.css",
-    "static/js/main.96d3add1.js"
+    "static/js/main.2d0214ba.js"
   ]
 }
