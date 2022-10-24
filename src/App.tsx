@@ -8,19 +8,17 @@ import { Table } from "components/Table/Table";
 function App() {
 	return (
 		<>
-			<div className="container_mobile">
-				<h1 style={{ textAlign: "center" }}>375px max</h1>
-				<AdaptiveCard {...ITEM_LIST[0]} desctop_mode={false} />
+			<div className="container_default">
+				<h1 style={{ textAlign: "center", alignSelf: "center" }}>
+					{" "}
+					320px - 1440px{" "}
+				</h1>
+				<AdaptiveCard {...ITEM_LIST[0]} />
 				<AdaptiveCard
 					{...ITEM_LIST[1]}
-					desctop_mode={false}
 					tagline_style={tagline_styles.custom1}
 					btn_style={btn_style}
 				/>
-			</div>
-			<div className="container_default">
-				<h1 style={{ textAlign: "center", alignSelf: "center" }}>1440px max</h1>
-
 				<AdaptiveCard
 					{...ITEM_LIST[2]}
 					tagline_style={tagline_styles.custom2}

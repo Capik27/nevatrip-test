@@ -5,9 +5,14 @@ import "./style.css";
 import CLOCK from "assets/clock.svg"
 
 const BREACKPOINT = 580;
+const TP_breakpoint= [1109,1031,953,360]
 
 export const AdaptiveCard = (props) => {
 	let isDesctop = useMediaQuery({query: `(min-width: ${BREACKPOINT + 1}px)`});
+	const is_3x = useMediaQuery({query: `(max-width: ${TP_breakpoint[0] + 1}px)`});
+	const is_2x = useMediaQuery({query: `(max-width: ${TP_breakpoint[1] + 1}px)`});
+	const is_1x = useMediaQuery({query: `(max-width: ${TP_breakpoint[2] + 1}px)`});
+	const is_3m = useMediaQuery({query: `(max-width: ${TP_breakpoint[3] + 1}px)`});
 ////////////////////////////////////////////////////////
 	const [anchorEl, setAnchorEl] = useState(null);
 	const handleClick = (event) => {
@@ -45,7 +50,15 @@ export const AdaptiveCard = (props) => {
 
 	let tp_sample = [];
 	let tp_hidden = [];
-	const tp_elem_pos = 3;
+	let tp_elem_pos = 3;
+	if(isDesctop){
+		if(is_3x) tp_elem_pos = 2;
+		if(is_2x) tp_elem_pos = 1;
+		if(is_1x) tp_elem_pos = 0;
+	} else if (is_3m){ 
+		tp_elem_pos = 2;
+	};
+	
 	let tp_more = false;
 	if (timepoints.length > tp_elem_pos + 1) {
 		tp_more = true;
@@ -99,7 +112,7 @@ export const AdaptiveCard = (props) => {
 		</span>);
 
 	const infoList = li_items.map( (item,index) => 
-		(<li key={index} className={LISTITEM_CLASS}>
+		(<li key={index} className={LISTITEM_CLASS} style={{whiteSpace: index === li_items.length-1 && isDesctop && "nowrap"}}>
 			<span><span>{item}</span>{index === li_items.length-1 && isDesctop && tpoints_sample}</span>
 		</li>));
 
