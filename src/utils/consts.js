@@ -15,7 +15,7 @@ const sample = {
         '6 остановок у главных достопримечательностей',
         'Ближайший рейс сегодня',
     ],
-    timepoints: ["10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00","24:00"],
+    timepoints: ["10:00","11:00","12:00","13:00"],
     duration: "2 часа",
     preview: "",
     price_online: '900 ₽',
@@ -25,9 +25,9 @@ const sample = {
 export const ITEM_LIST = [
     {...sample, preview: images[0], id: 0  },
     {...sample, preview: images[0], id: 1, price_online: '2900 ₽', price_offline: '1200 ₽ на причале', uniqcode:'dmfklsfsdfl'},
-    {...sample, preview: images[1], id: 2, title: "Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off 2020"},
+    {...sample, preview: images[1], id: 2, timepoints: ["10:00","11:00","12:00"], title: "Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off 2020"},
     {...sample, preview: images[2], id: 3, price_offline: "", tagline: "КРУГЛЫЙ ГОД",title: "Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off 2020"},
-    {...sample, preview: images[3], id: 4, tagline: "",title: "Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off 2020"},
+    {...sample, preview: images[3], id: 4, tagline: "", timepoints: ["10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00","24:00"],title: "Обзорная экскурсия по рекам и каналам с остановками Hop on Hop Off 2020"},
 ]
 
 
