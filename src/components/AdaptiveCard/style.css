@@ -65,9 +65,6 @@
   
 }
 
-.ccc{
-    white-space: nowrap;
-}
 
 .card_list-item::before{
     content: url("assets/check-mark.svg");
@@ -78,8 +75,6 @@
 
 .card_timepoint-wrapper{
     transition: all 0.5s;
-    
-
 }
 
 
@@ -289,9 +284,4 @@
     line-height: 45px;
     padding: 0 35px;
     
-}
-
-.xxx{
-    border-top-left-radius: 16px;
-    border-bottom-right-radius: 16px;
 }
